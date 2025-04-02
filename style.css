@@ -1,0 +1,265 @@
+/* ----------------------------------*/
+/* BASIC SETUP */
+/* ----------------------------------*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  /* colors */
+  --color-rose-800: #7a284e;
+  --color-rose-50: #fff7fb;
+  --color-stone-900: #312e2c;
+  --color-stone-600: #5f564d;
+  --color-stone-150: #e3ddd7;
+  --color-stone-100: #f3e5d7;
+  --color-brown-800: #854632;
+  --color-white: #fff;
+}
+
+h1,
+h3,
+h5,
+p {
+  letter-spacing: 0px;
+}
+
+h1,
+h3,
+h5 {
+  line-height: 100%;
+}
+
+p {
+  line-height: 150%;
+}
+
+body {
+  background-color: var(--color-stone-100);
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+  font-style: normal;
+  padding: 12.8rem 4.8rem;
+}
+
+.card {
+  width: 73.6rem;
+  height: 167rem;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4rem;
+  background-color: var(--color-white);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2.4rem;
+}
+
+.top-image {
+  height: 30rem;
+  width: 65.6rem;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.2rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.2rem;
+}
+
+.title-container {
+  flex-direction: column;
+  display: flex;
+  row-gap: 2.4rem;
+}
+
+.title {
+  font-size: 4rem;
+  font-family: "Young Serif";
+  color: var(--color-stone-900);
+}
+
+.desc {
+  font-size: 1.6rem;
+  color: var(--color-stone-600);
+}
+
+.preparation-container {
+  background-color: var(--color-rose-50);
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.6rem;
+  border-radius: 1.2rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  h3 {
+    color: var(--color-rose-800);
+    font-size: 2rem;
+  }
+}
+
+.preparation-desc {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.6rem;
+  list-style-image: url(./assets/images/Ellipse\ 1.png);
+  list-style: outside;
+  color: var(--color-stone-600);
+  padding-left: 1.5rem;
+  font-size: 1.6rem;
+  li::marker {
+    color: var(--color-rose-800);
+  }
+  li {
+    padding-left: 2.8rem;
+  }
+}
+.ingredients-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4rem;
+  h5 {
+    color: var(--color-brown-800);
+    font-family: "Young Serif";
+    font-size: 2.8rem;
+  }
+}
+
+.ingredients {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
+  list-style-image: url(./assets/images/Ellipse\ 1.png);
+  list-style: outside;
+  padding-inline-start: 0.8rem;
+  color: var(--color-stone-600);
+  font-size: 1.6rem;
+  line-height: 150%;
+  padding-left: 2.3rem;
+  li::marker {
+    color: var(--color-rose-800);
+    margin-right: 1.6rem;
+  }
+  li {
+    padding-left: 2rem;
+  }
+}
+
+.line {
+  background-color: var(--color-stone-150);
+  height: 1px;
+  width: 100%;
+}
+
+.instructions-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4rem;
+  h5 {
+    color: var(--color-brown-800);
+    font-family: "Young Serif";
+    font-size: 2.8rem;
+  }
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
+  list-style-position: outside;
+  padding-inline-start: 2.3rem;
+  font-size: 1.6rem;
+  color: var(--color-stone-600);
+  li::marker {
+    color: var(--color-brown-800);
+    font-size: 1.6rem;
+    line-height: 150%;
+    font-weight: 600;
+  }
+  li {
+    padding-left: 1.7rem;
+  }
+}
+
+.nutrition-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4rem;
+  h5 {
+    color: var(--color-brown-800);
+    font-family: "Young Serif";
+    font-size: 2.8rem;
+  }
+  p {
+    font-size: 1.6rem;
+    color: var(--color-stone-600);
+  }
+}
+
+.nutrition-table {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.2rem;
+  padding: 0 3.2rem;
+}
+
+.nutrition-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* TABLET */
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .card {
+    width: 61.6rem;
+    height: 180rem;
+    padding: 0;
+  }
+  .top-image {
+    width: 53.2rem;
+  }
+}
+
+@media (min-width: 375px) {
+  body {
+    padding: 0;
+  }
+  .card {
+    width: 37.5rem;
+    height: 199rem;
+    padding: 0;
+    row-gap: 0;
+  }
+  .top-image {
+    height: 17.1rem;
+    width: 37.5rem;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
+  .text-content {
+    padding: 4rem 3.2rem;
+  }
+
+  .title-container h1 {
+    font-size: 3.6rem;
+  }
+}
